@@ -264,7 +264,7 @@ local function location_handler(err, locations, ctx, _, error_message)
 
   local client = vim.lsp.get_client_by_id(ctx.client_id)
 
-  if vim.tbl_islist(locations) then
+  if vim.islist(locations) then
     if #locations == 1 then
       vim.lsp.util.jump_to_location(locations[1], client.offset_encoding)
 
